@@ -105,7 +105,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-lg glass flex-shrink-0"
+              className="md:hidden p-2 rounded-lg flex-shrink-0"
             >
               {isOpen ? (
                 <X size={24} className="text-tea_green-500" />
