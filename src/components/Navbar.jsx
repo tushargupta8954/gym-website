@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -43,7 +42,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
             <motion.div
               whileHover={{ scale: 1.1, rotate: 360 }}
               transition={{ duration: 0.5 }}
@@ -62,7 +61,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="relative group"
+                className="relative group whitespace-nowrap"
               >
                 <span className={`transition-colors ${
                   isActive(item.path)
@@ -79,13 +78,13 @@ const Navbar = () => {
           </div>
 
           {/* Right Side */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-shrink-0">
             {/* Theme Toggle */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleTheme}
-              className="p-2 rounded-lg glass hover:bg-tea_green-500/10"
+              className="p-2 rounded-lg glass hover:bg-tea_green-500/10 flex-shrink-0"
             >
               {isDark ? (
                 <Sun size={20} className="text-cornsilk-300" />
@@ -98,7 +97,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="hidden sm:block px-6 py-2 rounded-lg bg-gradient-to-r from-tea_green-500 to-papaya_whip-500 text-black font-semibold hover:shadow-lg hover:shadow-tea_green-500/30"
+              className="hidden sm:block px-6 py-2 rounded-lg bg-gradient-to-r from-tea_green-500 to-papaya_whip-500 text-black font-semibold hover:shadow-lg hover:shadow-tea_green-500/30 whitespace-nowrap"
             >
               Join Now
             </motion.button>
@@ -106,7 +105,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-lg glass"
+              className="md:hidden p-2 rounded-lg glass flex-shrink-0"
             >
               {isOpen ? (
                 <X size={24} className="text-tea_green-500" />

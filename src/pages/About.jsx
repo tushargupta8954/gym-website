@@ -1,4 +1,3 @@
-// src/pages/About.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Award, Users, Target } from 'lucide-react';

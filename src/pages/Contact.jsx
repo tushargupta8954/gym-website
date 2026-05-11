@@ -1,18 +1,20 @@
-// src/pages/Contact.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Send,
-  ChevronDown,
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
-} from 'lucide-react';
+  FiMapPin,
+  FiPhone,
+  FiMail,
+  FiClock,
+  FiSend,
+  FiChevronDown,
+} from "react-icons/fi";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import Hero from '../components/Hero';
 import GradientButton from '../components/GradientButton';
 
@@ -50,22 +52,22 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: MapPin,
+      icon: FiMapPin,
       title: 'Address',
       content: '123 Fitness Avenue, Gym City, GC 12345',
     },
     {
-      icon: Phone,
+      icon: FiPhone,
       title: 'Phone',
       content: '+1 (555) 123-4567',
     },
     {
-      icon: Mail,
+      icon: FiMail,
       title: 'Email',
       content: 'info@fitelite.com',
     },
     {
-      icon: Clock,
+      icon: FiClock,
       title: 'Hours',
       content: 'Mon-Fri: 6AM-10PM | Sat-Sun: 8AM-8PM',
     },
@@ -109,10 +111,10 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, url: '#', label: 'Facebook' },
-    { icon: Instagram, url: '#', label: 'Instagram' },
-    { icon: Twitter, url: '#', label: 'Twitter' },
-    { icon: Linkedin, url: '#', label: 'LinkedIn' },
+    { icon: FaFacebookF, url: '#', label: 'Facebook' },
+    { icon: FaInstagram, url: '#', label: 'Instagram' },
+    { icon: FaTwitter, url: '#', label: 'Twitter' },
+    { icon: FaLinkedinIn, url: '#', label: 'LinkedIn' },
   ];
 
   return (
@@ -245,7 +247,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-tea_green-500 to-papaya_whip-500 text-black font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-tea_green-500/30"
                 >
-                  <Send size={20} />
+                  <FiSend size={20} />
                   Send Message
                 </motion.button>
 
@@ -363,7 +365,7 @@ const Contact = () => {
                     animate={{ rotate: openFAQ === idx ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <ChevronDown size={24} className="text-tea_green-500" />
+                    <FiChevronDown size={24} className="text-tea_green-500" />
                   </motion.div>
                 </motion.button>
 

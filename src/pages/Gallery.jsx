@@ -1,4 +1,3 @@
-// src/pages/Gallery.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Maximize2 } from 'lucide-react';
